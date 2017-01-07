@@ -43,10 +43,10 @@ def pad(sub_img):
     b, g, r = (b + 5, g + 5, r + 5)
     f_img = np.array([b, g, r] * (maxp ** 2),
                      dtype='uint8').reshape([maxp, maxp, 3])
-    c_h = (maxp - height)//2
-    c_w = (maxp - width)//2
+    c_h = (maxp - height) // 2
+    c_w = (maxp - width) // 2
 
     for j in range(c_h, c_h + height):
         for k in range(c_w, c_w + width):
-            f_img[j][k] = sub_img[j - c_h][k - c_w]
+            f_img[j][k] = (sub_img[j - c_h][k - c_w])
     return f_img

@@ -3,6 +3,7 @@ import numpy as np
 import scipy.io as sio
 import cv2
 import preprocess
+import pickle
 
 def create_train_dataset():
     return create_dataset(['train/'], 'digitStruct.mat')
@@ -58,3 +59,14 @@ def create_dataset(dlist, fname = 'digitStruct.mat'):
                     y.append(_y)
 
     return (np.array(x), np.array(y))
+
+print("Generating Train Dataset")
+X, Y = create_train_dataset()
+pickle.dump({"X":X, "Y":Y}, open("train_dataset.p", "wb"))
+print("Generating Extra Dataset")
+X, Y = create_extra_dataset()
+pickle.dump({"X":X, "Y":Y}, open("extra_dataset.p", "wb"))
+print("Generating Test Dataset")
+X, Y = create_test_dataset()
+pickle.dump({"X":X, "Y":Y}, open("test_dataset.p", "wb"))
+print("Done")
