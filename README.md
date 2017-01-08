@@ -5,9 +5,9 @@ ODR - Optical Digit Reader
 A Neural Network Based Optical Digit Reader (Trained on The Street View House Numbers (SVHN) Dataset).
 
 <h1>Setup:</h1>
-<p>Download and extract Stanford's SVHN Dataset using download_datasets.sh</p>
-<p>Generate 32x32 Datasets using create_dataset.py</p>
-<p>Train Neural Network model using train.py</p>
+<p>download_datasets.sh: Download and extract Stanford's SVHN Dataset.</p>
+<p>create_dataset.py: Generate 32x32 image Datasets.</p>
+<p>train.py: Train Neural Network model on 32x32 image datasets.</p>
 <p>To run Live Classifier execute run_odr.py</p>
 
 <h1>References:</h1>
