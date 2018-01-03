@@ -1,4 +1,4 @@
-<h1>ODR - Optical Digit Reader<h1>
+<h1>ODR - Optical Digit Reader </h1>
 
 A Neural Network Based Optical Digit Reader (Trained on The Street View House Numbers (SVHN) Dataset).
 
